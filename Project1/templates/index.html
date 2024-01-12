@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área</title>
+
+</head>
+<body>
+    <nav>
+        <span>
+            Área de retângulo
+        </span>  
+    </nav>
+<div class="container-max">
+    <form>
+        <div>
+            <label for="altura">Altura</label>
+            <input type="number" class="form-control" id="altura">
+        </div>
+
+        <div>
+            <label for="base">Base</label>
+            <input type="number" class="form-control" id="base">
+        </div>  
+        
+    </form>
+    <button type="button" class="btn-primary" id="calcular">Calcular</button>
+
+    <div id="arearetangulo"></div>
+
+</div>
+
+<script>
+    const calcular = document.getElementById('calcular');
+
+
+
+function CalculaRetangulo(){
+    const base = document.getElementById("base").value;
+    const altura = document.getElementById("altura").value;
+    const resultado = document.getElementById('arearetangulo');
+
+    const area = base * altura;
+
+
+    resultado.textContent = `A base ${base} x altura ${altura} é: ${area}`;
+}
+
+calcular.addEventListener('click', CalculaRetangulo);
+</script>
+    
+</body>
+</html>
